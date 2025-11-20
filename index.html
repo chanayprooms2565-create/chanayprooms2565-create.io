@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ | Sweet School Portal</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="login-container">
+        <h1>🍭 เข้าสู่ระบบพอร์ทัล 🍬</h1>
+        <p>ยินดีต้อนรับนักเรียนคนเก่ง!</p>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="studentName">ชื่อ - นามสกุล</label>
+                <input type="text" id="studentName" placeholder="เช่น มะม่วง หวานอร่อย" required>
+            </div>
+            <div class="input-group">
+                <label for="studentId">รหัสนักเรียน</label>
+                <input type="text" id="studentId" placeholder="ตัวเลข 5 หลัก" pattern="[0-9]{5}" required>
+            </div>
+            <div class="input-group class-group">
+                <div class="class-input">
+                    <label for="grade">ชั้น</label>
+                    <select id="grade" required>
+                        <option value="">เลือกชั้น</option>
+                        <option value="ม.1">ม.1</option>
+                        <option value="ม.2">ม.2</option>
+                        <option value="ม.3">ม.3</option>
+                        <option value="ม.4">ม.4</option>
+                        <option value="ม.5">ม.5</option>
+                        <option value="ม.6">ม.6</option>
+                    </select>
+                </div>
+                <div class="class-input">
+                    <label for="room">ห้อง</label>
+                    <input type="number" id="room" placeholder="เลขห้อง" min="1" max="15" required>
+                </div>
+            </div>
+            <button type="submit" class="login-button">เข้าสู่ระบบ</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="script.js"></script> </body>
+</html>
