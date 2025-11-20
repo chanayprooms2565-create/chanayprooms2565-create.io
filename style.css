@@ -1,0 +1,116 @@
+/* การตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7e0e7; /* สีชมพูอ่อนเหมือนไอซิ่ง */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* กล่องล็อกอิน */
+.login-container {
+    background-color: #ffffff; /* กล่องสีขาวเหมือนวิปครีม */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3); /* เงาสีชมพูสดใส */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff69b4; /* สีชมพูเข้มเหมือนลูกกวาด */
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* กลุ่ม Input */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4CAF50; /* สีเขียวมิ้นต์ */
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #add8e6; /* ขอบสีฟ้าอ่อนเหมือนน้ำตาล */
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #ffb6c1; /* เมื่อโฟกัสเปลี่ยนเป็นสีชมพูอ่อน */
+    box-shadow: 0 0 5px rgba(255, 182, 193, 0.5);
+    outline: none;
+}
+
+/* จัดกลุ่ม ชั้น/ห้อง */
+.class-group {
+    display: flex;
+    gap: 15px;
+}
+
+.class-input {
+    flex-grow: 1;
+}
+
+/* ปุ่มเข้าสู่ระบบ */
+.login-button {
+    background-color: #ffd700; /* สีทองเหมือนคาราเมล */
+    color: #8b4513; /* สีน้ำตาลช็อกโกแลต */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #ffc107; /* สีเข้มขึ้นเมื่อชี้ */
+}
+
+.login-button:active {
+    transform: scale(0.98);
+}
+
+/* ข้อความแจ้งเตือน */
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: none; /* ซ่อนไว้ตอนแรก */
+}
+
+.success {
+    background-color: #e6ffe6;
+    color: #38761d;
+}
+
+.error {
+    background-color: #ffe6e6;
+    color: #cc0000;
+}

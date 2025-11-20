@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats Shop - Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="sweet-header">
+        <h1>Sweet Emporium 🍭</h1>
+        <p>รสชาติความสุขที่สร้างสรรค์</p>
+        <button id="open-cart-btn" class="cart-btn"><i class="fas fa-shopping-cart"></i> ตะกร้าสินค้า</button>
+    </header>
+
+    <main class="sweet-main">
+        <nav class="category-nav">
+            <a href="#nougat" class="nav-item active">นูกัต</a>
+            <a href="#marshmallow" class="nav-item">มาชเมลโลว์ช็อก</a>
+            <a href="#brownie" class="nav-item">บราวนี่</a>
+            <a href="#" class="nav-item">ทั้งหมด</a>
+        </nav>
+
+        <section class="product-catalog">
+            
+            <h2 id="nougat" class="category-title">Nougat 🥜</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img-placeholder"></div>
+                    <h3>นูกัตอัลมอนด์</h3>
+                    <p class="price">฿ 150.00</p>
+                    <button class="add-to-cart-btn">สั่งซื้อ <i class="fas fa-plus-circle"></i></button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-placeholder"></div>
+                    <h3>นูกัตพิสตาชิโอ</h3>
+                    <p class="price">฿ 180.00</p>
+                    <button class="add-to-cart-btn">สั่งซื้อ <i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+
+            <h2 id="marshmallow" class="category-title">Chocolate Marshmallow 🍫</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img-placeholder">
+
+[Image of Chocolate Coated Marshmallow]
+</div>
+                    <h3>มาชเมลโลว์เคลือบ</h3>
+                    <p class="price">฿ 85.00</p>
+                    <button class="add-to-cart-btn">สั่งซื้อ <i class="fas fa-plus-circle"></i></button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-placeholder"></div>
+                    <h3>มาชเมลโลว์ป๊อป</h3>
+                    <p class="price">฿ 95.00</p>
+                    <button class="add-to-cart-btn">สั่งซื้อ <i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+
+            <h2 id="brownie" class="category-title">Brownies ☕</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img-placeholder"></div>
+                    <h3>บราวนี่ฟัดจ์เข้มข้น</h3>
+                    <p class="price">฿ 65.00</p>
+                    <button class="add-to-cart-btn">สั่งซื้อ <i class="fas fa-plus-circle"></i></button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-placeholder"></div>
+                    <h3>บราวนี่วอลนัท</h3>
+                    <p class="price">฿ 75.00</p>
+                    <button class="add-to-cart-btn">สั่งซื้อ <i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div id="order-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>ตะกร้าสินค้า 🛒</h2>
+            
+            <div class="cart-items-container">
+                <div class="cart-item">
+                    <span>นูกัตอัลมอนด์ (x1)</span>
+                    <span class="cart-price">฿ 150.00</span>
+                </div>
+                <div class="cart-item">
+                    <span>บราวนี่ฟัดจ์ (x2)</span>
+                    <span class="cart-price">฿ 130.00</span>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <p>รวมทั้งหมด (3 ชิ้น)</p>
+                <p class="total-price">฿ 280.00</p>
+            </div>
+
+            <button class="checkout-btn">ยืนยันคำสั่งซื้อ</button>
+            <p class="js-note">**หมายเหตุ: ฟังก์ชันนี้ต้องใช้ JavaScript เพื่อทำให้ใช้งานได้จริง**</p>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('order-modal');
+        const openBtn = document.getElementById('open-cart-btn');
+        const closeBtn = document.querySelector('.modal-content .close-btn');
+
+        openBtn.onclick = function() {
+            modal.style.display = 'flex';
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
